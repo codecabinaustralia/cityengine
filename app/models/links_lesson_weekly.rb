@@ -1,0 +1,2 @@
+class LinksLessonWeekly < ApplicationRecord
+end
