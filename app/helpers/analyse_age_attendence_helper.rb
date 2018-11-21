@@ -1,0 +1,2 @@
+module AnalyseAgeAttendenceHelper
+end

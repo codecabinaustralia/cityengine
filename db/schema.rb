@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_20_194334) do
+ActiveRecord::Schema.define(version: 2018_11_21_012108) do
+
+  create_table "levels", force: :cascade do |t|
+    t.string "title"
+    t.string "color"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "links_lesson_weeklies", force: :cascade do |t|
     t.string "StuSurname"
@@ -43,6 +50,15 @@ ActiveRecord::Schema.define(version: 2018_11_20_194334) do
     t.string "StuAge"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "skills", force: :cascade do |t|
+    t.string "title"
+    t.integer "level_id"
+    t.integer "rank_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["level_id"], name: "index_skills_on_level_id"
   end
 
 end
