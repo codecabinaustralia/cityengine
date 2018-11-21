@@ -53,7 +53,7 @@ class LinksLessonWeeklyWorker
   		  		RPPhone: data.values_at(18).join(''),
   		  		RPEmail: data.values_at(19).join(''),
   		  		RPBookingBalance: data.values_at(20).join(''),
-  		  		RPBookingFee: data.values_at(21).join(''),
+  		  		RPBookingFree: data.values_at(21).join(''),
   		  		FamilyPaymentType: data.values_at(22).join(''),
   		  		SpecialDiscount: data.values_at(23).join(''),
   		  		RP: data.values_at(24).join(''),
