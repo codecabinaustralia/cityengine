@@ -6,6 +6,7 @@ class LinksLessonWeeklyWorker
   	require 'time'
   	require 'date'
   	require 'net/ftp'
+    require 'csv'
 
   	# Connect to FTP Server and get CSV File
 
