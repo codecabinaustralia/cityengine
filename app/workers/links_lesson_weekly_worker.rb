@@ -34,7 +34,7 @@ class LinksLessonWeeklyWorker
   	  		LinksLessonWeekly.create(
   		  		StuSurname: data.values_at(0).join(''),
   		  		StuGivenNames: data.values_at(1).join(''),
-  		  		StudId: data.values_at(2).join(''),
+  		  		StuId: data.values_at(2).join(''),
   		  		LessonDay: data.values_at(3).join(''),
   		  		LessonTime: data.values_at(4).join(''),
   		  		LessonLevel: data.values_at(5).join(''),
