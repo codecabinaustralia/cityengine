@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_achieved: MyString
+  level_skill_id: MyString
+  people_id: MyString
+
+two:
+  date_achieved: MyString
+  level_skill_id: MyString
+  people_id: MyString

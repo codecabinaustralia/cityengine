@@ -36,7 +36,8 @@ Rails.application.routes.draw do
       get 'analyse_progression/teacher_skill_progression'
       get 'analyse_progression/teacher_level_progression'
       get 'analyse_progression/student_skill_progression'
-      get 'analyse_progression/student_level_progression'
+      get 'analyse_progression/skill_skill_progression'
+      get 'analyse_progression/skill_level_progression'
     end
   end
 

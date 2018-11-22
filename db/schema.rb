@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_21_012108) do
+ActiveRecord::Schema.define(version: 2018_11_21_080654) do
+
+  create_table "level_progressions", force: :cascade do |t|
+    t.integer "site_id"
+    t.integer "student_id"
+    t.integer "level_id"
+    t.integer "teacher_id"
+    t.date "date_achieved"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["level_id"], name: "index_level_progressions_on_level_id"
+    t.index ["site_id"], name: "index_level_progressions_on_site_id"
+    t.index ["student_id"], name: "index_level_progressions_on_student_id"
+    t.index ["teacher_id"], name: "index_level_progressions_on_teacher_id"
+  end
 
   create_table "levels", force: :cascade do |t|
     t.string "title"
@@ -52,6 +66,27 @@ ActiveRecord::Schema.define(version: 2018_11_21_012108) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "sites", force: :cascade do |t|
+    t.string "title"
+    t.string "links_reference_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "skill_progressions", force: :cascade do |t|
+    t.integer "site_id"
+    t.integer "student_id"
+    t.integer "skill_id"
+    t.integer "teacher_id"
+    t.date "date_achieved"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["site_id"], name: "index_skill_progressions_on_site_id"
+    t.index ["skill_id"], name: "index_skill_progressions_on_skill_id"
+    t.index ["student_id"], name: "index_skill_progressions_on_student_id"
+    t.index ["teacher_id"], name: "index_skill_progressions_on_teacher_id"
+  end
+
   create_table "skills", force: :cascade do |t|
     t.string "title"
     t.integer "level_id"
@@ -59,6 +94,44 @@ ActiveRecord::Schema.define(version: 2018_11_21_012108) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["level_id"], name: "index_skills_on_level_id"
+  end
+
+  create_table "student_levels", force: :cascade do |t|
+    t.string "links_reference_id"
+    t.string "class_type_id"
+    t.string "date_attained"
+    t.string "date_time"
+    t.string "level_description"
+    t.string "student_id"
+    t.string "teacher_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "student_skills", force: :cascade do |t|
+    t.string "date_achieved"
+    t.string "level_skill_id"
+    t.string "people_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "students", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "dob"
+    t.string "links_reference_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "teachers", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "dob"
+    t.string "links_reference_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

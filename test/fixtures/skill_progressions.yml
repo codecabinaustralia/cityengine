@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  site: one
+  student: one
+  skill: one
+  date_achieved: 2018-11-21
+
+two:
+  site: two
+  student: two
+  skill: two
+  date_achieved: 2018-11-21

@@ -1,0 +1,1 @@
+json.level_progression @level_progression, :id, :date_achieved, :site, :student, :teacher, :level

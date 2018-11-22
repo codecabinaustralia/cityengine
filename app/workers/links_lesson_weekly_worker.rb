@@ -61,7 +61,6 @@ class LinksLessonWeeklyWorker
   		  		StuDateOfBirth: data.values_at(26).join(''),
   		  		StuAge: data.values_at(27).join('')
   	  		)
-        
   	end
 
   	# Run refactor worker

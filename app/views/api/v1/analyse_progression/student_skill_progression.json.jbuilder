@@ -1,0 +1,1 @@
+json.skill_progression @skill_progression, :id, :date_achieved, :site, :student, :teacher, :skill
